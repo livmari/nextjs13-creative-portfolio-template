@@ -3,27 +3,40 @@ import Link from 'next/link'
 import { nanoid } from 'nanoid'
 
 import { getClient } from '@/lib/client'
+import { ProjectCard } from '@/components'
 
 const query = gql`
   query Projects {
     projects {
       title
       slug
+      coverImage {
+        url
+      }
     }
   }
 `
+
+interface ProjectType {
+  title: string
+  slug: string
+  coverImage: { url: string }
+}
 
 const HomePage = async () => {
   const { data } = await getClient().query({ query })
 
   return (
-    <main>
+    <main className={'page-section-px'}>
       <section>
         <div>
-          {data.projects.map((project: { title: string; slug: string }) => (
-            <Link key={nanoid()} href={`/projects/${project.slug}`}>
-              {project.title}
-            </Link>
+          {data.projects.map((project: ProjectType) => (
+            <ProjectCard
+              key={nanoid()}
+              title={project.title}
+              imageUrl={project.coverImage.url}
+              slug={project.slug}
+            />
           ))}
         </div>
       </section>

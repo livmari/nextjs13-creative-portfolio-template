@@ -6,10 +6,12 @@ import { routes, RouteType } from '@/lib/routes'
 const PageNav: React.FC = () => {
   return (
     <nav>
-      <ul>
+      <ul className={'flex flex-row gap-4'}>
         {routes.map((route: RouteType) => (
           <li key={nanoid()}>
-            <Link href={route.path}>{route.label}</Link>
+            <Link href={route.path} className={'link-text'}>
+              {route.label}
+            </Link>
           </li>
         ))}
       </ul>

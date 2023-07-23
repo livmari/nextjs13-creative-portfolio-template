@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-700;
+  }
+}
+
+@layer components {
+  // Image styling
+  .image {
+    @apply rounded-lg object-cover;
+  }
+}
+
+@layer utilities {
+  // Layout styles
+  .page-layout {
+    @apply flex flex-col min-h-screen gap-12 sm:gap-16 md:gap-20;
+  }
+
+  .page-section-px {
+    @apply px-6 sm:px-8;
+  }
+
+  .page-section-container {
+    @apply container mx-auto;
+  }
+
+  // Typography styles
+  .link-text {
+    @apply /* Default styles */
+    text-primary-600
+    /* Hover styles */
+    hover:text-primary-800 hover:underline
+    /* Active styles */
+    active:text-primary-400;
+  }
+}

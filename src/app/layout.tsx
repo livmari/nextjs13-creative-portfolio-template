@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
-import { PageNav } from '@/components'
+import { PageHeader } from '@/components'
 
 import './globals.scss'
 
@@ -16,7 +16,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang={'en'}>
       <body className={inter.className}>
-        <PageNav />
+        <PageHeader />
 
         {children}
       </body>
