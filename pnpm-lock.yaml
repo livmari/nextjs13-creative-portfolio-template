@@ -28,7 +28,7 @@ dependencies:
     version: 4.0.2
   next:
     specifier: 13.4.12
-    version: 13.4.12(react-dom@18.2.0)(react@18.2.0)
+    version: 13.4.12(react-dom@18.2.0)(react@18.2.0)(sass@1.64.1)
   postcss:
     specifier: 8.4.27
     version: 8.4.27
@@ -38,6 +38,9 @@ dependencies:
   react-dom:
     specifier: 18.2.0
     version: 18.2.0(react@18.2.0)
+  sass:
+    specifier: ^1.64.1
+    version: 1.64.1
   tailwindcss:
     specifier: 3.3.3
     version: 3.3.3
@@ -96,7 +99,7 @@ packages:
       react: ^18
     dependencies:
       '@apollo/client': 3.8.0-rc.1(graphql@16.7.1)(react-dom@18.2.0)(react@18.2.0)
-      next: 13.4.12(react-dom@18.2.0)(react@18.2.0)
+      next: 13.4.12(react-dom@18.2.0)(react@18.2.0)(sass@1.64.1)
       react: 18.2.0
       superjson: 1.13.1
       ts-invariant: 0.10.3
@@ -552,6 +555,10 @@ packages:
       react-is: 16.13.1
     dev: false
 
+  /immutable@4.3.1:
+    resolution: {integrity: sha512-lj9cnmB/kVS0QHsJnYKD1uo3o39nrbKxszjnqS9Fr6NB7bZzW45U6WSGBPKXDL/CvDKqDNPA4r3DoDQ8GTxo2A==}
+    dev: false
+
   /inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
     dependencies:
@@ -662,7 +669,7 @@ packages:
     hasBin: true
     dev: false
 
-  /next@13.4.12(react-dom@18.2.0)(react@18.2.0):
+  /next@13.4.12(react-dom@18.2.0)(react@18.2.0)(sass@1.64.1):
     resolution: {integrity: sha512-eHfnru9x6NRmTMcjQp6Nz0J4XH9OubmzOa7CkWL+AUrUxpibub3vWwttjduu9No16dug1kq04hiUUpo7J3m3Xw==}
     engines: {node: '>=16.8.0'}
     hasBin: true
@@ -687,6 +694,7 @@ packages:
       postcss: 8.4.14
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
+      sass: 1.64.1
       styled-jsx: 5.1.1(react@18.2.0)
       watchpack: 2.4.0
       zod: 3.21.4
@@ -919,6 +927,16 @@ packages:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
     dependencies:
       queue-microtask: 1.2.3
+    dev: false
+
+  /sass@1.64.1:
+    resolution: {integrity: sha512-16rRACSOFEE8VN7SCgBu1MpYCyN7urj9At898tyzdXFhC+a+yOX5dXwAR7L8/IdPJ1NB8OYoXmD55DM30B2kEQ==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.3
+      immutable: 4.3.1
+      source-map-js: 1.0.2
     dev: false
 
   /scheduler@0.23.0:
